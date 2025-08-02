@@ -8,7 +8,7 @@ import { auth } from "./firebase.config";
 const App = () => {
   return (
     <div>
-      <div className="w-full md:flex-row flex-col flex justify-between items-center h-20 p-3 bg-dark text-white">
+      <div className="w-full md:flex-row flex-col flex justify-between items-center min-h-20 p-3 bg-dark text-white">
         <h1 className="text-4xl">Logo</h1>
 
         <ul className="flex gap-10">
