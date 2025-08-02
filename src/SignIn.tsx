@@ -26,7 +26,7 @@ const SignIn = () => {
   }
 
   return (
-    <div className="mx-auto md:w-1/4 w-full p-3 border rounded p-3 mt-20">
+    <div className="mx-auto md:w-1/4 w-full border rounded p-3 mt-20">
       <h1 className="text-2xl mb-3">Sign In</h1>
       <input
         onChange={(e) => setUser({ ...user, email: e.target.value })}
