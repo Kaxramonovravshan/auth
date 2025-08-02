@@ -13,7 +13,6 @@ const App = () => {
     const token = localStorage.getItem("token");
 
     console.log(123);
-    
 
     if (!token) {
       navigate("/sign-up");
@@ -37,7 +36,7 @@ const App = () => {
           </Link>
           <button
             onClick={() => {
-              signOut(auth).then((res) => {
+              signOut(auth).then(() => {
                 localStorage.removeItem("token");
               });
             }}

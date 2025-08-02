@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { addDoc, collection } from "firebase/firestore";
 import { auth, db } from "./firebase.config";
@@ -18,9 +18,9 @@ const SignUp = () => {
 
   function signUp() {
     createUserWithEmailAndPassword(auth, user.email, user.password)
-      .then((res) => {
+      .then(() => {
         const userCol = collection(db, "users");
-        addDoc(userCol, user).then((res) => {
+        addDoc(userCol, user).then(() => {
           navigate("/sign-in");
         });
       })
@@ -63,7 +63,10 @@ const SignUp = () => {
       <button onClick={signUp} className="btn btn-dark w-1/2 block mx-auto">
         sign up
       </button>
-      <button onClick={signGoogle} className="btn btn-primary  mt-2 w-1/2 block mx-auto">
+      <button
+        onClick={signGoogle}
+        className="btn btn-primary  mt-2 w-1/2 block mx-auto"
+      >
         Google
       </button>
     </div>

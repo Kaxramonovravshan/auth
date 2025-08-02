@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./firebase.config";
@@ -20,7 +20,7 @@ const SignIn = () => {
         localStorage.setItem("token", token);
         navigate("/");
       })
-      .catch((err) => {
+      .catch(() => {
         alert("This user is undefined");
       });
   }
