@@ -19,7 +19,7 @@ const Home = () => {
 
   return (
     <div>
-      <h1 className="text-3xl">Hello - {currentUser || "Guest"}</h1>
+      <h1 className="text-3xl">Hello - {currentUser?.slice(-10) || "Guest"}</h1>
     </div>
   );
 };
