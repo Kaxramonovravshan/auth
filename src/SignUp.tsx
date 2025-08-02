@@ -34,7 +34,7 @@ const SignUp = () => {
   }
 
   return (
-    <div className="mx-auto w-1/4 border rounded p-3 mt-20">
+    <div className="mx-auto md:w-1/4 w-full p-3 border rounded p-3 mt-20">
       <h1 className="text-2xl mb-3">Sign Up</h1>
       <input
         onChange={(e) => setUser({ ...user, userName: e.target.value })}
