@@ -4,21 +4,8 @@ import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 import { signOut } from "firebase/auth";
 import { auth } from "./firebase.config";
-import { useEffect } from "react";
 
 const App = () => {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-
-    console.log(123);
-
-    if (!token) {
-      navigate("/sign-up");
-    }
-  }, [localStorage.getItem("token")]);
-
   return (
     <div>
       <div className="w-full md:flex-row flex-col flex justify-between items-center h-20 p-3 bg-dark text-white">
